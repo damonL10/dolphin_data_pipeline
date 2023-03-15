@@ -1,1 +1,17 @@
-insert into shop_of_companies (shop_name, shop_location, company_id) values ('Bontique 1', 'Tsim Sha Tsui', 1), ('Bontique 2', 'Causeway Bay', 1), ('Bontique 3', 'Mong Kok', 1), ('Bontique 4', 'Sha Tin', 1), ('Bontique 5', 'Tuen Mun', 1), ('Bontique 6', 'Tsuen Wan', 1), ('Bontique 7', 'Kowloon Tong', 1), ('Bontique 8', 'Tseung Kwan O', 1), ('Restaurant 1', 'Tsim Sha Tsui', 2), ('Restaurant 2', 'Mong Kok', 2), ('Restaurant 3', 'Causeway Bay', 2), ('Restaurant 4', 'Wan Chai', 2), ('Restaurant 5', 'Sha Tin', 2), ('Restaurant 6', 'Tsuen Wan', 2), ('Restaurant 7', 'Kowloon City', 2), ('Restaurant 8', 'Tseung Kwan O', 2);
+insert into shop_of_companies (shop_name, shop_location, company_id) values 
+('Bontique 1', 'Tsim Sha Tsui', 1), 
+('Bontique 2', 'Causeway Bay', 1), 
+('Bontique 3', 'Mong Kok', 1), 
+('Bontique 4', 'Sha Tin', 1), 
+('Bontique 5', 'Tuen Mun', 1), 
+('Bontique 6', 'Tsuen Wan', 1), 
+('Bontique 7', 'Kowloon Tong', 1), 
+('Bontique 8', 'Tseung Kwan O', 1), 
+('Restaurant 1', 'Tsim Sha Tsui', 2), 
+('Restaurant 2', 'Mong Kok', 2), 
+('Restaurant 3', 'Causeway Bay', 2), 
+('Restaurant 4', 'Wan Chai', 2), 
+('Restaurant 5', 'Sha Tin', 2), 
+('Restaurant 6', 'Tsuen Wan', 2), 
+('Restaurant 7', 'Kowloon City', 2), 
+('Restaurant 8', 'Tseung Kwan O', 2);
