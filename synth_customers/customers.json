@@ -1,0 +1,144 @@
+{
+    "type": "array",
+    "length": {
+      "type": "number",
+      "subtype": "u64",
+      "range": {
+        "low": 1,
+        "high": 3000,
+        "step": 1
+      }
+    },
+    "content": {
+      "type": "object",
+  
+      "customer_name": {
+        "type": "string",
+        "faker": {
+            "generator": "name"
+        }
+      },
+      "phone": {
+        "type": "number",
+        "constant": 98765432
+      },
+      "email": {
+        "type": "string",
+        "faker": {
+            "generator": "safe_email"
+        }
+      },
+      "gender": {
+        "type": "string",
+        "categorical": {
+            "male": 3,
+            "female": 7
+          }
+      },
+      "age_group": {
+        "type": "string",
+        "categorical": {
+          "20s or below": 1,
+          "30s": 4,
+          "40s":3,
+          "50s":1,
+          "60s or above":1 
+        }
+      },
+      "occupation": {
+        "type": "string",
+        "categorical": {
+            "student": 1,
+            "housewife": 2,
+            "office work": 3,
+            "hospitality": 2,
+            "technical": 1,
+            "logistic": 1
+          }
+      },
+      "income_level": {
+        "type": "string",
+        "categorical": {
+            "under 10,000": 2,
+            "10,001 - 20,000": 2,
+            "20,001 - 30,000": 4,
+            "30,000 - 40,000": 1,
+            "above 40,000": 1
+          }
+      },
+      "living_district": {
+            "optional": false,
+            "type": "one_of",
+            "variants": [
+              {
+                "type": "string",
+                "pattern": "islands district"
+              },
+              {
+                "type": "string",
+                "pattern": "kwai tsing district"
+              },
+              {
+                "type": "string",
+                "pattern": "north district"
+              },
+              {
+                "type": "string",
+                "pattern": "sai kung district"
+              },
+              {
+                "type": "string",
+                "pattern": "sha tin district"
+              },
+              {
+                "type": "string",
+                "pattern": "tai po district"
+              },
+              {
+                "type": "string",
+                "pattern": "tsuen wan district"
+              },
+              {
+                "type": "string",
+                "pattern": "yuen long district"
+              },
+              {
+                "type": "string",
+                "pattern": "kowloon city district"
+              },
+              {
+                "type": "string",
+                "pattern": "kwun tong district"
+              },
+              {
+                "type": "string",
+                "pattern": "sham shui po district"
+              },
+              {
+                "type": "string",
+                "pattern": "wong tai sin district"
+              },
+              {
+                "type": "string",
+                "pattern": "yau tsim wong district"
+              },
+              {
+                "type": "string",
+                "pattern": "central and western district"
+              },
+              {
+                "type": "string",
+                "pattern": "eastern district"
+              },
+              {
+                "type": "string",
+                "pattern": "southern district"
+              },
+              {
+                "type": "string",
+                "pattern": "wan chai district"
+              }
+            ]
+        }
+    }
+}

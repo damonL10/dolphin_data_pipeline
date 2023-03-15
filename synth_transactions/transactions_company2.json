@@ -1,0 +1,94 @@
+{
+    "type": "array",
+    "length": {
+      "type": "number",
+      "subtype": "u64",
+      "range": {
+        "low": 1,
+        "high": 3700,
+        "step": 1
+      }
+    },
+    "content": {
+      "type": "object",
+
+      "transaction_date": {
+        "optional": false,
+        "type": "date_time",
+        "format": "%Y-%m-%d %H:%M:%S",
+        "begin": "2022-01-01 09:00:00",
+        "end": "2023-01-31 22:00:00"
+      },
+      "transaction_amount": {
+        "optional": false,
+        "type": "number",
+        "subtype": "i32",
+        "range": {
+          "low": 40,
+          "high": 1400,
+          "step": 1
+        }
+      },
+      "payment_method": {
+        "optional": false,
+        "type": "one_of",
+        "variants": [
+            {
+              "type": "string",
+              "pattern": "cash"
+            },
+            {
+              "type": "string",
+              "pattern": "octopus"
+            },
+            {
+              "type": "string",
+              "pattern": "credit card"
+            },
+            {
+              "type": "string",
+              "pattern": "支付寶"
+            }
+          ]
+      },
+      "coupon_used": {
+        "type": "bool",
+        "frequency": 0.8
+      },
+      "coupon_id": {
+        "optional": false,
+        "type": "number",
+        "range": {
+          "low": 9,
+          "high": 17,
+          "include_high": true,
+          "step": 1
+        }
+      },
+      "customer_id": {
+        "optional": false,
+        "type": "number",
+        "range": {
+          "low": 1,
+          "high": 1102,
+          "include_high": true,
+          "step": 1
+        }
+      },
+      "company_id": {
+        "optional": false,
+        "type": "number",
+        "constant": 2
+      },
+      "shop_id": {
+        "optional": false,
+        "type": "number",
+        "range": {
+          "low": 9,
+          "high": 16,
+          "include_high": true,
+          "step": 1
+        }
+      }
+    }
+}
