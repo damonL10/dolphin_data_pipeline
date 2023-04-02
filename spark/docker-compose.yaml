@@ -37,6 +37,7 @@ services:
       - SPARK_SSL_ENABLED=no
     volumes:
       - ./src:/opt/bitnami/spark/src
+      - ./data_csv:/opt/bitnami/spark/src/csvdata
 
   application_db:
     image: "postgres:13"
@@ -67,7 +68,18 @@ services:
         - "5431:5432"
     volumes:
         - ./datewarehouse/data:/var/lib/postgresql/data
-  
+
+  mongodb:
+    image: mongo:5
+    restart: always
+    networks:
+      my_dae_project:
+        ipv4_address: 172.1.0.6
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb/data:/data/db
+
 networks:
   my_dae_project:
     driver: bridge
